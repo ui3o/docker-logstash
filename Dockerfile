@@ -24,4 +24,4 @@ RUN ln -sf /usr/share/zoneinfo/CET /etc/localtime
 ## default folder set
 RUN echo "cd /root" >> ~/.bashrc
 
-ENTRYPOINT ["/usr/share/logstash/bin/logstash -f /usr/share/logstash/pipeline/logstash.conf"]
+ENTRYPOINT ["/usr/share/logstash/bin/logstash", "-f", "/usr/share/logstash/pipeline/logstash.conf"]
